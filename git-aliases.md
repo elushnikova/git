@@ -4,7 +4,7 @@
 - [git publish \$branch](#git-publish-branch) - publish `$branch` to `origin`
 - [git master](#git-master) - checkout to `master` and pull changes from `origin`
 - [git trim](#git-trim) - show branches that don't exist at `origin`
-- [git review \$pr \$branch](#git-review-pr-branch) - download code from pull request to new local branch.
+- [git review \$pr \$branch](#git-review-pr-branch) - download code from pull request to new local branch for review.
 
 Learn more at [Git documentation](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases).
 
@@ -140,7 +140,7 @@ git config --global --unset alias.trim
 ```
 
 # git review `$pr` `$branch`
-Download code from pull request to new local branch.
+Download code from pull request to new local branch for review.
 
 [Back to contents](#contents)
 
