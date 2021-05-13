@@ -1,8 +1,32 @@
+# git review `$pr` `$branch`
+Download code from pull request to new local branch.
+
+[Back to contents](#contents)
+
+```bash
+# Original command
+git fetch origin pull/$pr/head:$branch
+
+# E.g.
+git fetch origin pull/5/head:alexey
 ```
+
+```bash
+# Set global alias
 git config --global alias.review '!f() {\
   git fetch origin pull/$1/head:$2;\
 }; f'
 ```
 
-git fetch origin pull/9/head:karlen
-git review 9 karlen
+```bash
+# Usage
+git review $pr $branch
+
+# E.g.
+git review 5 alexey
+```
+
+```bash
+# Remove global alias
+git config --global --unset alias.review
+```
