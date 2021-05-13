@@ -4,6 +4,7 @@
 - [git publish \$branch](#git-publish-branch) - publish `$branch` to `origin`
 - [git master](#git-master) - checkout to `master` and pull changes from `origin`
 - [git trim](#git-trim) - show branches that don't exist at `origin`
+- [git review \$pr \$branch](#git-review-pr-branch) - download code from pull request to new local branch.
 
 Learn more at [Git documentation](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases).
 
@@ -136,4 +137,37 @@ git trim
 ```bash
 # Remove global alias
 git config --global --unset alias.trim
+```
+
+# git review `$pr` `$branch`
+Download code from pull request to new local branch.
+
+[Back to contents](#contents)
+
+```bash
+# Original command
+git fetch origin pull/$pr/head:$branch
+
+# E.g.
+git fetch origin pull/5/head:alexey
+```
+
+```bash
+# Set global alias
+git config --global alias.review '!f() {\
+  git fetch origin pull/$1/head:$2;\
+}; f'
+```
+
+```bash
+# Usage
+git review $pr $branch
+
+# E.g.
+git review 5 alexey
+```
+
+```bash
+# Remove global alias
+git config --global --unset alias.review
 ```
