@@ -4,11 +4,13 @@ Download code from pull request to new local branch and checkout to it.
 [Back to contents](#contents)
 
 ```bash
-# Original command
+# Original commands
 git fetch origin pull/$pr/head:$branch
+git checkout $branch
 
 # E.g.
 git fetch origin pull/5/head:alexey
+git checkout alexey
 ```
 
 ```bash
