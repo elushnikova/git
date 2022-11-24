@@ -1,11 +1,10 @@
-# git review `$pr` `$branch`
-Download code from pull request to new local branch and checkout to it.
+# git review `$prNumber` `$branch`
 
-[Back to contents](#contents)
+Download code from pull request to new local branch and checkout to it.
 
 ```bash
 # Original commands
-git fetch origin pull/$pr/head:$branch
+git fetch origin pull/$prNumber/head:$branch
 git checkout $branch
 
 # E.g.
@@ -22,7 +21,7 @@ git config --global alias.review '!f() {\
 
 ```bash
 # Usage
-git review $pr $branch
+git review $prNumber $branch
 
 # E.g.
 git review 5 alexey
