@@ -1,6 +1,5 @@
 # Contents
 
-- [git brief](#git-brief) - show brief git log
 - [git publish \$branch](#git-publish-branch) - publish `$branch` to `origin`
 - [git master](#git-master) - checkout to `master` and pull changes from `origin`
 - [git trim](#git-trim) - show branches that don't exist at `origin`
@@ -13,44 +12,6 @@ Check what aliases you already have with this command:
 ```bash
 # Get alias entries
 git config -l | grep alias
-```
-
-# git brief
-
-Show brief git log with commit SHA and message first line only.
-
-[Back to contents](#contents)
-
-```bash
-# Sample output
-0123456 chore: Open dev server to LAN
-ef01234 feat: Add detail tabs
-56789ab feat: Add 404 page
-```
-
-```bash
-# Original command
-git log --oneline --no-decorate
-```
-
-```bash
-# Set global alias
-git config --global alias.brief 'log --oneline --no-decorate'
-```
-
-```bash
-# Usage
-git brief
-```
-
-```bash
-# Usage: show last 10 commits
-git brief -10
-```
-
-```bash
-# Remove global alias
-git config --global --unset alias.brief
 ```
 
 # git publish `$branch`
@@ -140,6 +101,7 @@ git config --global --unset alias.trim
 ```
 
 # git review `$pr` `$branch`
+
 Download code from pull request to new local branch for review.
 
 [Back to contents](#contents)
